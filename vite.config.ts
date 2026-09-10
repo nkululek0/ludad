@@ -15,6 +15,9 @@ export default defineConfig({
     // Allow a strict Content-Security-Policy
     // withtout inlining assets as base64:
     assetsInlineLimit: 0,
+    rollupOptions: {
+      external: ['@shopify/hydrogen-react'],
+    },
   },
   ssr: {
     optimizeDeps: {
@@ -30,6 +33,8 @@ export default defineConfig({
        */
       include: ['set-cookie-parser', 'cookie', 'react-router'],
     },
+    // Force Vite to bundle problematic packages instead of treating them as external Node dependencies
+    noExternal: ['@shopify/hydrogen'],
   },
   server: {
     allowedHosts: ['.tryhydrogen.dev', 'cdn.jsdelivr.net', '.ngrok-free.app', '.youtube.com'],
