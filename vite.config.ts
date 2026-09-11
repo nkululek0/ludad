@@ -4,8 +4,6 @@ import {oxygen} from '@shopify/mini-oxygen/vite';
 import {reactRouter} from '@react-router/dev/vite';
 import tsconfigPaths from 'vite-tsconfig-paths';
 import { vercelPreset } from '@vercel/remix/vite';
-import { vitePlugin as remixVitePlugin } from '@remix-run/dev';
-// import {vercelPreset} from '@vercel/react-router/vite';
 
 export default defineConfig({
   plugins: [
@@ -13,9 +11,6 @@ export default defineConfig({
     oxygen(),
     reactRouter(),
     vercelPreset(),
-    // reactRouter({
-    //   presets: [],
-    // }),
     tsconfigPaths(),
   ],
   build: {
