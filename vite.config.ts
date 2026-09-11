@@ -3,6 +3,8 @@ import {hydrogen} from '@shopify/hydrogen/vite';
 import {oxygen} from '@shopify/mini-oxygen/vite';
 import {reactRouter} from '@react-router/dev/vite';
 import tsconfigPaths from 'vite-tsconfig-paths';
+import { vercelPreset } from '@vercel/remix/vite';
+import { vitePlugin as remixVitePlugin } from '@remix-run/dev';
 
 export default defineConfig({
   plugins: [
@@ -10,6 +12,9 @@ export default defineConfig({
     oxygen(),
     reactRouter(),
     tsconfigPaths(),
+    // remixVitePlugin({
+    //   presets: [vercelPreset()],
+    // }),
   ],
   build: {
     // Allow a strict Content-Security-Policy
@@ -37,7 +42,7 @@ export default defineConfig({
     noExternal: ['@shopify/hydrogen'],
   },
   server: {
-    allowedHosts: ['.tryhydrogen.dev', 'cdn.jsdelivr.net', '.ngrok-free.app', '.youtube.com'],
+    allowedHosts: ['.tryhydrogen.dev', 'cdn.jsdelivr.net', '.ngrok-free.app', '.youtube.com', '.vercel.app'],
     host: '0.0.0.0',
   },
 });
