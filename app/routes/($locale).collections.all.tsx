@@ -51,6 +51,8 @@ function loadDeferredData({context}: Route.LoaderArgs) {
 export default function Collection() {
   const { collections } = useLoaderData<typeof loader>();
 
+  console.log('collections nodes', collections.nodes.length);
+
   return (
     <>
     {/* Hero Section */}
@@ -87,12 +89,17 @@ export default function Collection() {
             </h2>
             <p className='font-source text-brand-navy/60'>
               {
-                collections.nodes.length <= 2 && (
+                collections.nodes.length <= 0 && (
+                  'No categories to show'
+                )
+              }
+              {
+                collections.nodes.length == 1 && (
                   'Showing 1 category'
                 )
               }
               {
-                collections.nodes.length >= 3 && (
+                collections.nodes.length >= 2 && (
                   `Showing ${ collections.nodes.length - 1 } categories`
                 )
               }
@@ -111,49 +118,47 @@ export default function Collection() {
         <section className='grid grid-cols-1 md:grid-cols2 lg:grid-cols-3 gap-16'>
           {
             collections.nodes.map((item, index) => {
-              if (index > 0) {
-                return (
-                  <>
-                  <Link
-                    key={ index }
-                    prefetch='intent'
-                    to={`/collections/${ item.handle }`}
-                    className="group block relative"
-                  >
-                    {/* Image Container with hover effects */}
-                    <div className="relative aspect-square overflow-hidden bg-brand-cream mb-2">
-                      {
-                        item.image && (
-                          <>
-                            <Image
-                              alt={ item.image.altText || item.title }
-                              data={ item.image }
-                              loading='lazy'
-                              sizes="(min-width: 1024px) 33vw, (min-width: 768px) 50vw, 100vw"
-                              className="w-full h-full object-cover"
-                            />
-                            {/* Overlay on hover */}
-                            <div className="absolute inset-0 bg-brand-navy/0 group-hover:bg-brand-navy/20 transition-colors duration-500" />
-                          </>
-                        )
-                      }
-                      {/* Corner Accents */}
-                      <div className="absolute top-4 left-4 w-8 h-8 border-l-2 border-t-2 border-brand-gold opacity-0 group-hover:opacity-100 transition-opacity duration-500" />
-                      <div className="absolute bottom-4 right-4 w-8 h-8 border-r-2 border-b-2 border-brand-gold opacity-0 group-hover:opacity-100 transition-opacity duration-500" />
-                    </div>
+              return (
+                <>
+                <Link
+                  key={ index }
+                  prefetch='intent'
+                  to={`/collections/${ item.handle }`}
+                  className="group block relative"
+                >
+                  {/* Image Container with hover effects */}
+                  <div className="relative aspect-square overflow-hidden bg-brand-cream mb-2">
+                    {
+                      item.image && (
+                        <>
+                          <Image
+                            alt={ item.image.altText || item.title }
+                            data={ item.image }
+                            loading='lazy'
+                            sizes="(min-width: 1024px) 33vw, (min-width: 768px) 50vw, 100vw"
+                            className="w-full h-full object-cover"
+                          />
+                          {/* Overlay on hover */}
+                          <div className="absolute inset-0 bg-brand-main/0 group-hover:bg-brand-main/20 transition-colors duration-500" />
+                        </>
+                      )
+                    }
+                    {/* Corner Accents */}
+                    <div className="absolute top-4 left-4 w-8 h-8 border-l-2 border-t-2 border-brand-gold opacity-0 group-hover:opacity-100 transition-opacity duration-500" />
+                    <div className="absolute bottom-4 right-4 w-8 h-8 border-r-2 border-b-2 border-brand-gold opacity-0 group-hover:opacity-100 transition-opacity duration-500" />
+                  </div>
 
-                    {/* Product Information */}
-                    <div className="relative">
-                      <h4
-                        className='font-playFair text-lg text-brand-navy group-hover:text-brand-gold transition-color duration-500'
-                      >
-                        { item.title }
-                      </h4>
-                    </div>
-                  </Link>
-                  </>
-                );
-              }
+                  {/* Product Information */}
+                  <div className="relative">
+                    <h4
+                      className='font-playFair text-lg text-brand-navy group-hover:text-brand-gold transition-color duration-500'
+                    >
+                      { item.title }
+                    </h4>
+                  </div>
+                </Link>
+                </>
+              );
             })
           }
         </section>

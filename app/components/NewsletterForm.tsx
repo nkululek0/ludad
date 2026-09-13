@@ -11,11 +11,18 @@ export default function NewsletterForm() {
   const result = fetcher.data;
 
   return (
-    <section className="border-b border-white/10">
+    <section className="border-b border-white">
       <div className="container mx-auto px-4 py-12">
         <div className="max-w-xl mx-auto text-center">
-          <h2 className="font-playFair text-2xl mb-4">Join the Baseline Circle</h2>
-          <p className='font-source text-sm text-gray-300 mb-6'>Subscribe to receive updates on new collections and exclusive offers</p>
+          <h2
+            className="font-playFair text-2xl mb-4"
+            style={{
+              textShadow: '2px 1px #C3A343'
+            }}
+          >
+              Join the Baseline Circle
+            </h2>
+          <p className='font-source text-sm text-white mb-6'>Subscribe to receive updates on new collections and exclusive offers</p>
           <fetcher.Form
             method="post"
             // action="/newsletter"
@@ -26,13 +33,13 @@ export default function NewsletterForm() {
             <input
               type='email'
               placeholder='Your email Address'
-              className='flex-1 px-4 py-3 bg-white/10 border-white/20 rounded-md text-white placeholder:text-gray-400 font-source'
+              className='flex-1 px-4 py-3 bg-white border-white rounded-md text-black placeholder:text-gray-400 font-source'
               required
               name='email'
             />
             <button
               type='submit'
-              className='w-max px-6 py-3 bg-brand-gold hover:bg-brand-goldDark transition-colors duration-300 rounded-md font-source'
+              className='w-max px-6 py-3 text-gray-400 bg-white hover:bg-brand-mainLight hover:text-white transition-colors duration-300 rounded-md font-source'
             >
               Subscribe
             </button>

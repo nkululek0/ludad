@@ -320,7 +320,7 @@ export function SortAndFilterProducts (props: SortAndFilterProductsProps) {
               </div>
               <button
                 type="submit"
-                className='w-full py-2.5 mt-1 text-white font-source text-base tracking-wider bg-brand-navy hover:bg-brand-navyLight'
+                className='w-full py-2.5 mt-1 text-white font-source text-base tracking-wider bg-brand-main hover:bg-brand-mainLight'
               >
                 Apply
               </button>

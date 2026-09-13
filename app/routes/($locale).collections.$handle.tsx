@@ -158,14 +158,21 @@ export default function Collection() {
   return (
     <>
     {/* Hero Section */}
-    <section className="relative h-[50vh] min-h-[400px] pt-[10rem] md:pt-[9rem] bg-brand-navy">
+    <section className="relative h-[50vh] min-h-[400px] pt-[10rem] md:pt-[9rem] bg-brand-main text-white">
       <div className="absolute inset-0">
       </div>
-      <div className="absolute inset-0 bg-gradient-to-b from-brand-navy/50 to-brand-navy/80" />
+      <div className="absolute inset-0" />
       <div className="relative container mx-auto px-4 h-full flex items-center">
         <div className="max-w-2xl">
-          <h1 className="font-playFair text-4xl md:text-6xl text-white mb-6">{ collection.title }</h1>
-          <p className="font-source text-leg text-gray-200 mb-8 max-w-xl">{ collection.description }</p>
+          <h1
+            className="font-playFair text-4xl md:text-6xl text-white mb-6"
+            style={{
+              textShadow: '2px 1px #C3A343'
+            }}
+          >
+            { collection.title }
+          </h1>
+          <p className="font-source text-leg mb-8 max-w-xl">{ collection.description }</p>
         </div>
       </div>
     </section>

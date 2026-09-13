@@ -14,6 +14,8 @@ const config: Config = {
           gold: '#C3A343',
           goldDark: '#B39333',
           gray: '#8C8C8C',
+          main: 'rgb(222 187 37)',
+          mainLight: 'rgb(233, 204, 74)'
         }
       },
       fontFamily: {

@@ -182,7 +182,7 @@ export function ProductImage({
             <button
               key={`dot-${ index }`}
               onClick={() => setSelectedIndex(index)}
-              className={`w-2 h-2 rounded-full transition-all duration-300 ${ selectedIndex == index ? 'bg-brand-gold w-4' : 'bg-brand-navy/20 hover:bg-brand-navy/40' }`}
+              className={`w-2 h-2 rounded-full transition-all duration-300 ${ selectedIndex == index ? 'bg-brand-gold w-4' : 'bg-brand-main/20 hover:bg-brand-main/40' }`}
             />
           ))
         }

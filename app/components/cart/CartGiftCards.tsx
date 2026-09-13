@@ -69,7 +69,7 @@ export function CartGiftCards ({
                     <div className="flex gap-2">
                       <button
                         type="submit"
-                        className={`px-4 py-2 bg-brand-navy text-white rounded text-sm font-source transition-colors duration-300 ${ isLoading ? 'opacity-50 cursor-not-allowed' : 'hover:bg-brand-navyLight' }`}
+                        className={`px-4 py-2 bg-brand-main text-white rounded text-sm font-source transition-colors duration-300 ${ isLoading ? 'opacity-50 cursor-not-allowed' : 'hover:bg-brand-mainLight' }`}
                       >
                         Apply
                       </button>

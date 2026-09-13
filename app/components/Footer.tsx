@@ -23,7 +23,7 @@ export function Footer({
     <Suspense>
       <Await resolve={footerPromise}>
         {(footer) => (
-          <footer className="bg-brand-navy text-white">
+          <footer className="bg-brand-main text-white">
             {/* Newsletter Signup */}
             <NewsletterForm />
 
@@ -32,8 +32,15 @@ export function Footer({
               <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-12">
                 {/* Brand Column */}
                 <div className="space-y-6">
-                  <h3 className="font-playFair text-2xl">BASELINE</h3>
-                  <p className="font-source text-sm text-gray-300 leading-relaxed">
+                  <h3
+                    className="font-playFair text-2xl"
+                    style={{
+                      textShadow: '2px 1px #C3A343'
+                    }}
+                  >
+                    BASELINE
+                  </h3>
+                  <p className="font-source text-sm leading-relaxed">
                     Crafted with precision, designed for distinction.
                   </p>
                   <div className="flex space-x-4">
@@ -69,18 +76,25 @@ export function Footer({
 
                 {/* Contact Column */}
                 <div className="space-y-6">
-                  <h4 className="font-playFair text-lg">Contact</h4>
-                  <ul className="space-y-4 font-source text-sm text-gray-400">
+                  <h4
+                    className="font-playFair text-lg"
+                    style={{
+                      textShadow: '2px 1px #C3A343'
+                    }}
+                  >
+                    Contact
+                    </h4>
+                  <ul className="space-y-4 font-source text-sm">
                     <li className="flex items-start space-x-3">
-                      <MapIcon className='w-5 h-5 text-brand-gold flex-shrink-0' />
+                      <MapIcon className='w-5 h-5 text-black flex-shrink-0' />
                       <span>123 Example Ave<br /> Forgettable Lane, Some place 2000</span>
                     </li>
                     <li className="flex items-start space-x-3">
-                      <Phone className='w-5 h-5 text-brand-gold flex-shrink-0' />
+                      <Phone className='w-5 h-5 text-black flex-shrink-0' />
                       <span>+27 123 456 7890</span>
                     </li>
                     <li className="flex items-start space-x-3">
-                      <Mail className='w-5 h-5 text-brand-gold flex-shrink-0' />
+                      <Mail className='w-5 h-5 text-black flex-shrink-0' />
                       <span>email@example.com</span>
                     </li>
                   </ul>
@@ -88,12 +102,19 @@ export function Footer({
 
                 {/* Quick Links Column */}
                 <div className="space-y-6">
-                  <h4 className="font-playFair text-lg">Quick Links</h4>
+                  <h4
+                    className="font-playFair text-lg"
+                    style={{
+                      textShadow: '2px 1px #C3A343'
+                    }}
+                  >
+                    Quick Links
+                  </h4>
                   <ul className="space-y-3 font-source text-sm">
                     <li>
                       <NavLink
                         to='/collections/all'
-                        className='text-gray-300 hover:text-brand-gold transition-colors duration-300'
+                        className='text-white hover:text-gray-300 transition-colors duration-300'
                       >
                         Products
                       </NavLink>
@@ -101,7 +122,7 @@ export function Footer({
                     <li>
                       <NavLink
                         to='/pages/our-craft'
-                        className='text-gray-300 hover:text-brand-gold transition-colors duration-300'
+                        className='text-white hover:text-gray-300 transition-colors duration-300'
                       >
                         Our Craft
                       </NavLink>
@@ -109,7 +130,7 @@ export function Footer({
                     <li>
                       <NavLink
                         to='/pages/care-guide'
-                        className='text-gray-300 hover:text-brand-gold transition-colors duration-300'
+                        className='text-white hover:text-gray-300 transition-colors duration-300'
                       >
                         Care Guide
                       </NavLink>
@@ -117,7 +138,7 @@ export function Footer({
                     <li>
                       <NavLink
                         to='/pages/about-us'
-                        className='text-gray-300 hover:text-brand-gold transition-colors duration-300'
+                        className='text-white hover:text-gray-300 transition-colors duration-300'
                       >
                         About Us
                       </NavLink>
@@ -127,7 +148,14 @@ export function Footer({
 
                 {/* Policies Column */}
                 <div className="space-y-6">
-                  <h4 className="font-playFair text-lg">Polices</h4>
+                  <h4
+                    className="font-playFair text-lg"
+                    style={{
+                      textShadow: '2px 1px #C3A343'
+                    }}
+                  >
+                    Polices
+                  </h4>
                   <FooterMenu
                     menu={ footer?.menu }
                     primaryDomainUrl={ header.shop.primaryDomain.url }
@@ -138,10 +166,10 @@ export function Footer({
             </div>
 
             {/* Copyright Bar */}
-            <div className="border-t border-white/10">
+            <div className="border-t border-white">
               <div className="container mx-auto px-4 py-6">
                 <div className="space-y-4 md:space-y-0">
-                  <p className="font-source text-sm text-center text-gray-400">
+                  <p className="font-source text-sm text-center text-white">
                     &copy; { new Date().getFullYear() } BASELINE. All rights reserved
                   </p>
                 </div>
@@ -178,7 +206,7 @@ function FooterMenu({
           return (
             <NavLink
               key={ item.id }
-              className={({isActive}) => `black text-gray-300 hover:text-brand-gold transition-colors duration-300 ${ isActive ? 'text-brand-gold' : '' }`}
+              className={({isActive}) => `black text-white hover:text-gray-300 transition-colors duration-300 ${ isActive ? 'text-brand-gold' : '' }`}
               end
               prefetch='intent'
               to={ url }

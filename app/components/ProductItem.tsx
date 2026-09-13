@@ -50,7 +50,7 @@ export function ProductItem({
                 className="w-full h-full object-cover"
               />
               {/* Overlay on hover */}
-              <div className="absolute inset-0 bg-brand-navy/0 group-hover:bg-brand-navy/20 transition-colors duration-500" />
+              <div className="absolute inset-0 bg-brand-main/0 group-hover:bg-brand-main/20 transition-colors duration-500" />
 
               {/* Quick view button */}
               <div

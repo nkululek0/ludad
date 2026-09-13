@@ -44,9 +44,14 @@ export default function SearchPage() {
     <>
     <div className="pt-24 md:pt-31">
       {/* Hero Section */}
-      <section className="bg-brand-navy pt-24 pb-10 md:pb-16 px-4">
+      <section className="bg-brand-main pt-24 pb-10 md:pb-16 px-4">
         <div className="container mx-auto text-center">
-          <h1 className="font-playFair text-2xl md:text-3xl text-white">
+          <h1
+            className="font-playFair text-2xl md:text-3xl text-white"
+            style={{
+              textShadow: '2px 1px #C3A343'
+            }}
+          >
             Search Results
           </h1>
         </div>
@@ -68,7 +73,7 @@ export default function SearchPage() {
               />
               <button
                 type="submit"
-                className='h-max w-max px-6 py-3 text-white bg-brand-gold hover:bg-brand-goldDark transition-colors duration-300 rounded-md font-source'
+                className='h-max w-max px-6 py-3 text-white bg-brand-main hover:bg-brand-mainLight transition-colors duration-300 rounded-md font-source'
               >
                 Search
               </button>

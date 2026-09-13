@@ -64,9 +64,9 @@ export function Header({
       `}
     >
       {/* Announcement Bar */}
-      <div className={`overflow-hidden transition-all duration-500 ease-in-out bg-brand-navy text-white ${ isScrolled ? 'max-h-0' : 'max-h-14' }`}>
+      <div className={`overflow-hidden transition-all duration-500 ease-in-out bg-brand-main text-white ${ isScrolled ? 'max-h-0' : 'max-h-14' }`}>
         <div className='container mx-auto text-center py-2.5 px-4'>
-          <p className='flex justify-center flex-wrap gap-[0.3em] font-source text-[13px] leading-tight sm:text-sm font-light tracking-wider'>
+          <p className='flex justify-center flex-wrap gap-[0.3em] font-source text-[13px] leading-tight sm:text-sm tracking-wider'>
             <span>Complimentary Shipping on Orders Above&#32;</span><Money data={{ amount: '750', currencyCode: 'ZAR' }} />
           </p>
         </div>

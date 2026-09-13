@@ -72,7 +72,7 @@ export function AddToCartButton({
                   before:w-full before:h-full before:bg-white/10 before:translate-x-[-100%]
                   hover:before:translate-x-[100%] before:transition-transform before:duration-700
                   disabled:before:hidden
-                  bg-brand-navy hover:bg-brand-navyLight disabled:bg-brand-gray disabled:cursor-not-allowed
+                  bg-brand-main hover:bg-brand-mainLight disabled:bg-brand-gray disabled:cursor-not-allowed
                 `}
               >
                 {

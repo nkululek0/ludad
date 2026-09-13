@@ -61,12 +61,12 @@ export default function Homepage() {
   const { recommendedProducts } = useLoaderData<typeof loader>();
 
   return (
-    <div className="home">
+    <div className="home border-b border-white">
       {/* Hero Section */}
       <section className="relative h-screen min-h-[670px] bg-brand-navy">
         <Image
           data={{
-            url: '/images/craftsman-on-sewing-machine.jpg',
+            url: '/images/headphones-black.jpg',
             width: 1920,
             height: 1000
           }}
@@ -77,11 +77,11 @@ export default function Homepage() {
         />
         <div className="relative container mx-auto px-4 h-full flex items-center">
           <div className="max-w-2xl">
-            <h1 className="font-playFair text-4xl md:text-6xl text-white mb-6">Artisanal apparel for the Modern Sophisticate</h1>
-            <p className="font-source text-leg text-gray-200 mb-8">Crafted in excellence, designed for distinction</p>
+            <h1 className="font-playFair text-4xl md:text-6xl text-white mb-8">Apparel and gadgets that you deserve</h1>
+            <p className="font-source text-leg text-white mb-12"></p>
             <Link
               to='/collections/all'
-              className='inline-flex items-center px-8 py-4 bg-brand-gold hover:bg-brand-goldDark transition-colors duration-300 text-white font-source medium'
+              className='inline-flex items-center px-8 py-4 bg-brand-main hover:bg-brand-mainLight transition-colors duration-300 text-white font-source medium'
             >
               Explore Collection
             </Link>
@@ -167,25 +167,35 @@ export default function Homepage() {
       </section>
 
       {/* Testimonial Section */}
-      <section className="py-20 px-4 bg-brand-navy text-white">
+      <section className="py-20 px-4 bg-brand-main text-white">
         <div className="container mx-auto max-w-4xl text-container">
           <div className="flex justify-center">
             {
               Array.from({ length: 5 }).map((_, i) => (
                 <Star
                   key={`start-${ i }`}
-                  fill='#C3A343'
+                  fill='#ffff'
                   color='#C3A343'
                   className='w-8 h-8 mb-8'
                 />
               ))
             }
           </div>
-          <blockquote className='font-playFair text-2xl md:text 3xl mb-8'>
+          <blockquote
+            className='font-playFair text-2xl md:text 3xl mb-8'
+            style={{
+              textShadow: '2px 1px #C3A343'
+            }}
+          >
             "The attention to detail and quality of craftsmanship in every
-            BASELINE product is simply unmatched. True artisanal excellence."
+            LUDAD product is simply unmatched. True artisanal excellence."
           </blockquote>
-          <cite className="font-source text-gray-300 not-italic">
+          <cite
+            className="font-source not-italic"
+            style={{
+              textShadow: '2px 1px black'
+            }}
+          >
             - The Luxury Report
           </cite>
         </div>

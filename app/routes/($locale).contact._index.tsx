@@ -38,13 +38,18 @@ const ContactPage = () => {
     <>
     <div className="min-h-screen pt-24 md:pt-31">
       {/* Hero Section */}
-      <section className="bg-brand-navy py-24 px-4">
+      <section className="bg-brand-main py-24 px-4">
         <div className="container mx-auto">
           <div className="max-w-4xl mx-auto text-center">
-            <h1 className="font-playFair text-2xl md:text-3xl text-white mb-6">
+            <h1
+              className="font-playFair text-2xl md:text-3xl text-white mb-6"
+              style={{
+                textShadow: '2px 1px #C3A343'
+              }}
+            >
               Connect With Us
             </h1>
-            <p className="font-source text-lg text-brand-cream max-w-2xl mx-auto">
+            <p className="font-source text-lg text-white max-w-2xl mx-auto">
               Whether you're interested in a private consultation, bespoke services, or have questions about our collection, we're here to assist you.
             </p>
           </div>
@@ -113,14 +118,14 @@ const ContactPage = () => {
                 <button
                   type='button'
                   onClick={() => setInquiryType('general')}
-                  className={`p-4 text-center font-source transition-colors ${inquiryType === 'general' ? 'bg-brand-navy text-white' : 'bg-brand-cream text-brand-navy hover:bg-brand-navy/10' }`}
+                  className={`p-4 text-center font-source transition-colors ${inquiryType === 'general' ? 'bg-brand-main text-white' : 'bg-brand-cream text-brand-navy hover:bg-brand-main/10' }`}
                 >
                   General Inquiry
                 </button>
                 <button
                   type='button'
                   onClick={() => setInquiryType('bespoke')}
-                  className={`p-4 text-center font-source transition-colors ${inquiryType === 'general' ? 'bg-brand-navy text-white' : 'bg-brand-cream text-brand-navy hover:bg-brand-navy/10' }`}
+                  className={`p-4 text-center font-source transition-colors ${inquiryType === 'general' ? 'bg-brand-main text-white' : 'bg-brand-cream text-brand-navy hover:bg-brand-main/10' }`}
                 >
                   Bespoke Services
                 </button>
@@ -182,7 +187,7 @@ const ContactPage = () => {
               <button
                 type='submit'
                 disabled={ formState === 'submitting' }
-                className="w-full bg-brand-navy text-white py-4 font-source tracking-wide hover:bg-brand-navyLight transition-colors disabled:bg-brand-navy/50"
+                className="w-full bg-brand-main text-white py-4 font-source tracking-wide hover:bg-brand-mainLight transition-colors disabled:bg-brand-main/50"
               >
                 { formState === 'submitting' ? 'Sending...' : 'Send Message' }
               </button>

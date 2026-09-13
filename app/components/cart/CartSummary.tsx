@@ -70,7 +70,7 @@ function CartCheckoutActions({checkoutUrl}: {checkoutUrl?: string}) {
       <a
         href={checkoutUrl}
         target="_self"
-        className='block py-6 px-4 text-center cursor-pointer text-white font-source tracking-wider transition-all duration-300 ease-in-out bg-brand-navy hover:bg-brand-navyLight'
+        className='block py-6 px-4 text-center cursor-pointer text-white font-source tracking-wider transition-all duration-300 ease-in-out bg-brand-main hover:bg-brand-mainLight'
       >
         <p>Continue to Checkout &rarr;</p>
       </a>

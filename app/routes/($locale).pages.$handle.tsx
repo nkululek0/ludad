@@ -60,7 +60,7 @@ export default function Page() {
   return (
     <div className="min-h-screen pt-24 md:pt-31">
       {/* Hero Section */}
-      <section className="bg-brand-navy py-24 px-4">
+      <section className="bg-brand-main py-24 px-4">
         <div className="container mx-auto">
           <div className="max-w-4xl mx-auto text-center">
             <h1 className="font-playFair text-2xl md:text-3xl text-white mb-6">
@@ -117,7 +117,7 @@ export default function Page() {
                 <Link
                   to='/contact'
                   prefetch='intent'
-                  className='inline-flex items-center px-8 py-4 mt-8 bg-brand-navy text-white hover:bg-brand-navyLight transition-colors duration-300 font-source tracking-wide'
+                  className='inline-flex items-center px-8 py-4 mt-8 bg-brand-main text-white hover:bg-brand-mainLight transition-colors duration-300 font-source tracking-wide'
                 >
                   { page.ctaButton?.value }
                 </Link>

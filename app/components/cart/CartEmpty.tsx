@@ -40,7 +40,7 @@ export function CartEmpty({
           to='/collections/all'
           prefetch='intent'
           onClick={ close }
-          className='inline-flex items-center justify-center px-8 py-4 mt-6 bg-brand-navy text-white font-source font-medium hover:bg-brand-navyLight transition-all duration-300'
+          className='inline-flex items-center justify-center px-8 py-4 mt-6 bg-brand-main text-white font-source font-medium hover:bg-brand-mainLight transition-all duration-300'
         >
           Explore Our Products
           <ArrowRight className='w-5 h-5 ml-2' />
