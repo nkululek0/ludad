@@ -84,7 +84,7 @@ export function Header({
               to='/'
               className='font-playFair text-2xl tracking-normal inline-block'
             >
-              <h1 className="font-medium my-0">BASELINE</h1>
+              <h1 className="font-medium my-0">LUDAD</h1>
             </NavLink>
           </div>
 
@@ -105,7 +105,7 @@ export function Header({
               className={`font-playFair tracking-wider text-center max-[550px]:hidden absolute left-1/2 -translate-x-1/2
                 lg:static lg:translate-x-0 lg:text-left transition-all duration-300 ease-in-out ${ isScrolled ? 'text-xl sm:text-2xl' : 'text-2xl sm:text-[28px]' }` }
             >
-              <h1 className="font-medium">BASELINE</h1>
+              <h1 className="font-medium">LUDAD</h1>
             </NavLink>
 
             {/* Desktop Navigation */}

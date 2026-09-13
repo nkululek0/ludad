@@ -10,7 +10,7 @@ import {ProductItem} from '~/components/ProductItem';
 import { ArrowRight, Star } from 'lucide-react';
 
 export const meta: Route.MetaFunction = () => {
-  return [{title: 'Hydrogen | Home'}];
+  return [{title: 'Ludad | Home'}];
 };
 
 export async function loader(args: Route.LoaderArgs) {
@@ -150,7 +150,7 @@ export default function Homepage() {
             <div className="max-w-xl">
               <h2 className="font-playFair text-3xl mb-6">Crafted by Master Artisans</h2>
               <p className="font-source text-gray-600 mb-8 leading-relaxed">
-                Every BASELINE product is a testament to traditional Craftsmanship, requiring over 30 hours
+                Every LUDAD product is a testament to traditional Craftsmanship, requiring over 30 hours
                 of meticulous handwork.
                 Our master artisans combine time-honoured techniques with contemporary design to create footwear of exceptional quality
               </p>
