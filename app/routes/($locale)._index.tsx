@@ -78,7 +78,9 @@ export default function Homepage() {
         <div className="relative container mx-auto px-4 h-full flex items-center">
           <div className="max-w-2xl">
             <h1 className="font-playFair text-4xl md:text-6xl text-white mb-8">Apparel and gadgets that you deserve</h1>
-            <p className="font-source text-leg text-white mb-12"></p>
+            <p className="w-max font-source bg-[#00000052] text-leg text-white mb-12 px-1">
+              Crafted with precision, designed for distinction
+            </p>
             <Link
               to='/collections/all'
               className='inline-flex items-center px-8 py-4 bg-brand-main hover:bg-brand-mainLight transition-colors duration-300 text-white font-source medium'
@@ -133,6 +135,7 @@ export default function Homepage() {
       </section>
 
       {/* Craftsman Section */}
+      {/*
       <section className="pb-20 px-4">
         <div className="container mx-auto">
           <div className="grid grid-cols-1 md:grid-cols-2 gap-12 items-center">
@@ -165,6 +168,7 @@ export default function Homepage() {
           </div>
         </div>
       </section>
+      */}
 
       {/* Testimonial Section */}
       <section className="py-20 px-4 bg-brand-main text-white">

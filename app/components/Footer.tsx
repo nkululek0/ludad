@@ -25,11 +25,11 @@ export function Footer({
         {(footer) => (
           <footer className="bg-brand-main text-white">
             {/* Newsletter Signup */}
-            <NewsletterForm />
+            {/* <NewsletterForm /> */}
 
             {/* Main Footer Content */}
             <div className="container mx-auto px-4 py-12">
-              <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-12">
+              <div className="grid grid-cols-1 md:grid-cols-2 gap-12">
                 {/* Brand Column */}
                 <div className="space-y-6">
                   <h3
@@ -38,7 +38,7 @@ export function Footer({
                       textShadow: '2px 1px #C3A343'
                     }}
                   >
-                    BASELINE
+                    LUDAD
                   </h3>
                   <p className="font-source text-sm leading-relaxed">
                     Crafted with precision, designed for distinction.
@@ -83,12 +83,12 @@ export function Footer({
                     }}
                   >
                     Contact
-                    </h4>
+                  </h4>
                   <ul className="space-y-4 font-source text-sm">
-                    <li className="flex items-start space-x-3">
+                    {/* <li className="flex items-start space-x-3">
                       <MapIcon className='w-5 h-5 text-black flex-shrink-0' />
                       <span>123 Example Ave<br /> Forgettable Lane, Some place 2000</span>
-                    </li>
+                    </li> */}
                     <li className="flex items-start space-x-3">
                       <Phone className='w-5 h-5 text-black flex-shrink-0' />
                       <span>+27 123 456 7890</span>
@@ -101,7 +101,7 @@ export function Footer({
                 </div>
 
                 {/* Quick Links Column */}
-                <div className="space-y-6">
+                {/* <div className="space-y-6">
                   <h4
                     className="font-playFair text-lg"
                     style={{
@@ -144,10 +144,10 @@ export function Footer({
                       </NavLink>
                     </li>
                   </ul>
-                </div>
+                </div> */}
 
                 {/* Policies Column */}
-                <div className="space-y-6">
+                {/* <div className="space-y-6">
                   <h4
                     className="font-playFair text-lg"
                     style={{
@@ -161,7 +161,7 @@ export function Footer({
                     primaryDomainUrl={ header.shop.primaryDomain.url }
                     publicStoreDomain={ publicStoreDomain }
                   />
-                </div>
+                </div> */}
               </div>
             </div>
 
@@ -169,8 +169,8 @@ export function Footer({
             <div className="border-t border-white">
               <div className="container mx-auto px-4 py-6">
                 <div className="space-y-4 md:space-y-0">
-                  <p className="font-source text-sm text-center text-white">
-                    &copy; { new Date().getFullYear() } BASELINE. All rights reserved
+                  <p className="font-source text-md text-center text-white">
+                    &copy; { new Date().getFullYear() } LUDAD. All rights reserved
                   </p>
                 </div>
               </div>
