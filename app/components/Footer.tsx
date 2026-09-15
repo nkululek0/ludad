@@ -27,11 +27,52 @@ export function Footer({
             {/* Newsletter Signup */}
             {/* <NewsletterForm /> */}
 
+            {/* Social links */}
+            <div className="border-b flex space-x-4 justify-center items-center py-4">
+              <p
+                className='font-source text-l'
+                style={{
+                  textShadow: '2px 1px #C3A343'
+                }}
+              >
+                Follow Us
+              </p>
+              <div className="flex space-x-2">
+                <a
+                  href="#"
+                  className="text-white-80 hover:text-brand-gold transition-colors duration-300"
+                >
+                  <img
+                    src={ Instagram }
+                    className='w-5 h-5'
+                  />
+                </a>
+                <a
+                  href="#"
+                  className="text-white-80 hover:text-brand-gold transition-colors duration-300"
+                >
+                  <img
+                    src={ Facebook }
+                    className='w-5 h-5'
+                  />
+                </a>
+                <a
+                  href="#"
+                  className="text-white-80 hover:text-brand-gold transition-colors duration-300"
+                >
+                  <img
+                    src={ X }
+                    className='w-5 h-5'
+                  />
+                </a>
+              </div>
+            </div>
+
             {/* Main Footer Content */}
-            <div className="container mx-auto px-4 py-12">
-              <div className="grid grid-cols-1 md:grid-cols-2 gap-12">
+            <div className="container mx-auto px-4 py-8">
+              <div className="grid grid-cols-1 md:grid-cols-3 gap-12">
                 {/* Brand Column */}
-                <div className="space-y-6">
+                <div className="space-y-3">
                   <h3
                     className="font-playFair text-2xl"
                     style={{
@@ -43,48 +84,23 @@ export function Footer({
                   <p className="font-source text-sm leading-relaxed">
                     Crafted with precision, designed for distinction.
                   </p>
-                  <div className="flex space-x-4">
-                    <a
-                      href="#"
-                      className="text-white-80 hover:text-brand-gold transition-colors duration-300"
-                    >
-                      <img
-                        src={ Instagram }
-                        className='w-5 h-5'
-                      />
-                    </a>
-                    <a
-                      href="#"
-                      className="text-white-80 hover:text-brand-gold transition-colors duration-300"
-                    >
-                      <img
-                        src={ Facebook }
-                        className='w-5 h-5'
-                      />
-                    </a>
-                    <a
-                      href="#"
-                      className="text-white-80 hover:text-brand-gold transition-colors duration-300"
-                    >
-                      <img
-                        src={ X }
-                        className='w-5 h-5'
-                      />
-                    </a>
-                  </div>
+                </div>
+
+                {/* Place Holder Column */}
+                <div>
                 </div>
 
                 {/* Contact Column */}
-                <div className="space-y-6">
+                <div className="space-y-3">
                   <h4
-                    className="font-playFair text-lg"
+                    className="font-playFair text-2xl"
                     style={{
                       textShadow: '2px 1px #C3A343'
                     }}
                   >
-                    Contact
+                    SUPPORT
                   </h4>
-                  <ul className="space-y-4 font-source text-sm">
+                  <ul className="flex space-x-12 font-source text-sm">
                     {/* <li className="flex items-start space-x-3">
                       <MapIcon className='w-5 h-5 text-black flex-shrink-0' />
                       <span>123 Example Ave<br /> Forgettable Lane, Some place 2000</span>
@@ -167,7 +183,7 @@ export function Footer({
 
             {/* Copyright Bar */}
             <div className="border-t border-white">
-              <div className="container mx-auto px-4 py-6">
+              <div className="container mx-auto px-4 py-4">
                 <div className="space-y-4 md:space-y-0">
                   <p className="font-source text-md text-center text-white">
                     &copy; { new Date().getFullYear() } LUDAD. All rights reserved
