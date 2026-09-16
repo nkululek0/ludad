@@ -99,10 +99,11 @@ export default function Homepage() {
         <div>
           <Suspense
             fallback={
-              <div className="grid grid-cols-1 md:grid-cols-3 gap-8">
+              <div className="grid grid-cols-1 md:grid-cols-4 gap-8">
                 {
                   Array.from({ length: 4 }).map((_, i) => (
                     <div key={`skeleton-${ i }`} className="flex flex-gap gap-4 animate-pulse">
+                      <div className="w-20 h-20 bg-gray-200 rounded"></div>
                       <div className="w-20 h-20 bg-gray-200 rounded"></div>
                       <div className="w-20 h-20 bg-gray-200 rounded"></div>
                       <div className="w-20 h-20 bg-gray-200 rounded"></div>
@@ -115,7 +116,7 @@ export default function Homepage() {
             <Await resolve={ recommendedProducts as Promise<RecommendedProductsQuery> } >
               {
                 (response) => (
-                  <div className="grid grid-cols-1 md:grid-cols-3 gap-8">
+                  <div className="grid grid-cols-1 md:grid-cols-4 gap-8">
                     {
                       response?.products.nodes.map((product) => (
                         <ProductItem
