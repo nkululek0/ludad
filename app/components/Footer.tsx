@@ -70,7 +70,7 @@ export function Footer({
 
             {/* Main Footer Content */}
             <div className="container mx-auto px-4 py-8">
-              <div className="grid grid-cols-1 md:grid-cols-3 gap-12">
+              <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-12">
                 {/* Brand Column */}
                 <div className="space-y-3">
                   <h3
@@ -87,7 +87,7 @@ export function Footer({
                 </div>
 
                 {/* Place Holder Column */}
-                <div>
+                <div className='hidden lg:block'>
                 </div>
 
                 {/* Contact Column */}
@@ -100,7 +100,7 @@ export function Footer({
                   >
                     SUPPORT
                   </h4>
-                  <ul className="flex space-x-12 font-source text-sm">
+                  <ul className="space-y-4 font-source text-sm md:flex md:space-x-12 md:space-y-0">
                     {/* <li className="flex items-start space-x-3">
                       <MapIcon className='w-5 h-5 text-black flex-shrink-0' />
                       <span>123 Example Ave<br /> Forgettable Lane, Some place 2000</span>
