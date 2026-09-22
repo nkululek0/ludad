@@ -8,7 +8,7 @@ import { SortAndFilterProducts } from '~/components/SortAndFilterProducts';
 import type {ProductItemFragment} from 'storefrontapi.generated';
 
 export const meta: Route.MetaFunction = ({data}) => {
-  return [{title: `Hydrogen | ${data?.collection.title ?? ''} Collection`}];
+  return [{title: `Ludad | ${data?.collection.title ?? ''} Collection`}];
 };
 
 /**
@@ -195,7 +195,7 @@ export default function Collection() {
 
     {/* Products Grid */}
     <section className="bg-white py-8 md:py-12">
-      <div className='w-full container mx-auto mb-4 px-4 flex flex-col items-start justify-between gap-6 md:flex-row md:items-center'>
+      <div className='w-full container mx-auto mb-8 md:mb-12 px-4 flex flex-col items-start justify-between gap-6 md:flex-row md:items-center'>
         <SortAndFilterProducts
           url={ url }
           filtering={ filterSearchParams }
