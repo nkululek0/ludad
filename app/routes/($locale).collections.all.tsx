@@ -6,7 +6,7 @@ import {ProductItem} from '~/components/ProductItem';
 import type {CollectionItemFragment} from 'storefrontapi.generated';
 
 export const meta: Route.MetaFunction = () => {
-  return [{title: `Hydrogen | Products`}];
+  return [{title: `Ludad | Products`}];
 };
 
 export async function loader(args: Route.LoaderArgs) {
@@ -51,8 +51,6 @@ function loadDeferredData({context}: Route.LoaderArgs) {
 export default function Collection() {
   const { collections } = useLoaderData<typeof loader>();
 
-  console.log('collections nodes', collections.nodes.length);
-
   return (
     <>
     {/* Hero Section */}
@@ -73,7 +71,7 @@ export default function Collection() {
       <div className="absolute inset-0 bg-gradient-to-b from-brand-navy/50 to-brand-navy/80" />
       <div className="relative container mx-auto px-4 h-full flex items-center">
         <div className="max-w-2xl">
-          <h1 className="font-playFair text-4xl md:text-6xl text-white mb-6">Artisanal Excellence</h1>
+          <h1 className="font-playFair text-4xl md:text-6xl text-white mb-6">An Insight To Our Collection</h1>
           <p className="font-source text-leg text-gray-200 mb-8 max-w-xl">Where time-honored techniques meet contemporary sophistication.</p>
         </div>
       </div>
@@ -100,7 +98,7 @@ export default function Collection() {
               }
               {
                 collections.nodes.length >= 2 && (
-                  `Showing ${ collections.nodes.length - 1 } categories`
+                  `Showing ${ collections.nodes.length } categories`
                 )
               }
             </p>
